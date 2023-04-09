@@ -29,6 +29,7 @@ body{
 .logo-text{
     font-weight: 700;
     font-size: 1.05rem;
+    white-space: nowrap;
 }
 
 .header .container{
@@ -36,27 +37,29 @@ body{
     justify-content: space-between;
     padding-top:1.5em;
     padding-bottom:1.5em;
+    align-items: center;
+
 }
 
 .nav ul{
     display: flex;
     list-style: none;
-    gap: 1em;
-    align-items: center;
-    justify-content: center;
+    gap: 1.5em;
 }
 .nav ul li a{
     text-decoration: none;
     color: #090909;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1rem; 
+    white-space: nowrap;  
+    
     
 }
 
 .hero{
     background-image: url('images/article-image-hero.png');
     background-size: cover;
-    min-height: 374px;
+    min-height: 50vh;
     color: white;
 }
 
@@ -86,15 +89,80 @@ body{
 .items{
     padding: 2em 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1.25em;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-gap: 3em;
 }
 
 .item img{
     width: 100%;
-    display: block;
+    object-fit: contain;
 }
 .item h2{
     margin-bottom: 0.4em;
 }
 
+.view-more-btn{
+    background: transparent;
+    border: 0;
+    color:#090909;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: block;
+    padding-bottom: 2em;
+}
+
+.footer{
+    background-color: #202020;
+    padding: 2em;
+    color: white;
+}
+
+.footer p{
+    text-align: center;
+    font-weight: bold;
+}
+.footer p span{
+    display: block;
+    font-weight: 100;
+    font-size: 0.9em;
+}
+
+@media(min-width: 576px){
+    .logo-text{
+        font-size: 1.75rem;
+    }
+    .nav ul li a{
+        font-size: 1.25rem;
+    }   
+    
+    .hero{
+        min-height: 60vh;
+    }
+
+    .hero h2{
+        font-size: 3rem;
+    }
+    
+    .hero p{
+        font-size: 1.5rem;
+    }
+
+    .items{
+        padding: 3.5em 0 2em 0;
+        gap: 2em;
+    }
+
+    .container{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .nav ul{
+        display: flex;
+        list-style: none;
+        gap: 2.5em;
+    }
+       
+}
