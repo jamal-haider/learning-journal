@@ -1,0 +1,100 @@
+
+*, *::before, *::after{
+    margin: 0;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container{
+    padding: 0 1.5em;   
+}
+
+.logo{
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.logo img{
+    width:30px;
+    height: 30px;
+}
+.logo-text{
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    padding-top:1.5em;
+    padding-bottom:1.5em;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: #090909;
+    text-transform: uppercase;
+    font-size: 1rem;
+    
+}
+
+.hero{
+    background-image: url('images/article-image-hero.png');
+    background-size: cover;
+    min-height: 374px;
+    color: white;
+}
+
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 50vh;
+    padding-bottom: 2em;
+}
+
+.date-text{
+    text-transform: uppercase;
+    margin: 0.5em 0;
+    display: block;
+    font-size: 1.25rem;
+}
+.hero h2{
+    font-size: 2rem;
+}
+
+.hero p{
+    margin-top: 0.75em;
+    font-size: 1.25rem;
+}
+
+.items{
+    padding: 2em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.25em;
+}
+
+.item img{
+    width: 100%;
+    display: block;
+}
+.item h2{
+    margin-bottom: 0.4em;
+}
+
